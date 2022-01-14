@@ -2,6 +2,8 @@ import math
 from collections import Counter
 
 
+# central measures - mean, median, and mode
+
 def mean(nums: list) -> float:
     return sum(nums) / len(nums)
 
