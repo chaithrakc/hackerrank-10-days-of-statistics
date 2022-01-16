@@ -2,6 +2,8 @@
 # Q1: find median for first half of the sample
 # Q3: find median for second half of the sample
 
+# Before doing any calculation of Quartiles we need to order the sequence from lowest to highest
+
 """
 
 https://towardsdatascience.com/what-are-quartiles-c3e117114cf1
@@ -14,22 +16,11 @@ the data at hand. With these, specifically, we will understand what is called ce
 “A measure of central tendency is a single value that attempts to describe a set of data by identifying
 the central position within that set of data”
 
-1) Before doing any calculation of Quartiles we need to order the sequence from lowest to highest
-
 """
 
 import numpy as np
 
-
-def median(sample: list) -> float:
-    size = len(sample)
-    mid_index = size // 2
-    # sample with odd length
-    if size % 2:
-        return sorted(sample)[mid_index]
-
-    # sample with even length
-    return sum(sorted(sample)[mid_index - 1: mid_index + 1]) / 2
+from day0.p01mean_median_mode import median
 
 
 def quartiles(sample: list) -> list:
